@@ -91,6 +91,8 @@ conjur variable set -i conjur/authn-jwt/github/enforced-claims -v "repository_ow
 ## Testing with Github Action
 Creating github action workflow to test for conjur communication. You can copy two yaml file from this repo to your environment and run it.
 
+Those workflow can be run with online github runner. You may not need to setup the local runner for this testing.
+
 ## Huy.Do
 
 
