@@ -1,0 +1,22 @@
+name: Conjur-Authn-API
+on: 
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetching secrets from conjur using API key
+        uses: cyberark/conjur-action@v2.0.5
+        with:
+          url: https://conjur.home.huydo.net
+          account: DEMO
+          host_id: ${{ secrets.CONJUR_USERNAME }}
+          api_key: ${{ secrets.CONJUR_API_KEY }}
+          secrets: test/host1/user|TEST_USER;test/host1/pass|TEST_PASS
+      - name: Checking the result
+        run: |
+          echo Show env detail:
+          env | grep TEST
+          echo "$TEST_USER:$TEST_PASS" | base64
