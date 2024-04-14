@@ -88,8 +88,10 @@ conjur variable set -i conjur/authn-jwt/github/issuer -v https://token.actions.g
 # This is setting for the mandatory attribute that need to have in jwt content. This attribute value also need to be matched to host's annotations in policy.
 conjur variable set -i conjur/authn-jwt/github/enforced-claims -v "repository_owner_id"
 ```
+## Testing with Github Action
+Creating github action workflow to test for conjur communication. You can copy two yaml file from this repo to your environment and run it.
 
-After done configuration on conjur, change your workflow yaml file and test the execution. You can use the online runner for this testing
+## Huy.Do
 
 
 
