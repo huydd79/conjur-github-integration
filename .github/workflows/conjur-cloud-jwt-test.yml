@@ -18,10 +18,10 @@ jobs:
       - name: Fetching secrets from conjur
         uses: cyberark/conjur-action@v2.0.2
         with:
-          url: https://conjur.home.huydo.net
-          account: DEMO
-          authn_id: github
-          secrets: test/host1/user|TEST_USER;test/host1/pass|TEST_PASS
+          url: https://conjur-edge.home.huydo.net/api
+          account: conjur
+          authn_id: hdo-github
+          secrets: data/vault/huydo/hdo_ansible02/user|TEST_USER;data/vault/huydo/hdo_ansible02/password|TEST_PASS
       - name: Checking the result
         run: |
           echo Show env detail:
