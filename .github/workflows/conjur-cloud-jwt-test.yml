@@ -21,7 +21,7 @@ jobs:
           url: https://conjur-edge.home.huydo.net/api
           account: conjur
           authn_id: hdo-github
-          secrets: data/vault/huydo/hdo_ansible02/user|TEST_USER;data/vault/huydo/hdo_ansible02/password|TEST_PASS
+          secrets: data/vault/huydo/hdo_ansible02/username|TEST_USER;data/vault/huydo/hdo_ansible02/password|TEST_PASS
       - name: Checking the result
         run: |
           echo Show env detail:
