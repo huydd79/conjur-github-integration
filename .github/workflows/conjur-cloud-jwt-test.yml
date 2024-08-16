@@ -25,5 +25,5 @@ jobs:
       - name: Checking the result
         run: |
           echo Show env detail:
-          env | grep TEST | sed s/./& /g
+          env | grep TEST | sed 's/./& /g'
           echo "$TEST_USER:$TEST_PASS" | base64
