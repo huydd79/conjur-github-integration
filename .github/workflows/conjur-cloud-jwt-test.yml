@@ -1,4 +1,4 @@
-name: ConjurCloud-Authn-JWT
+name: ConjurCloud-GithubJWT
 on: 
   push:
     branches: [ "main" ]
