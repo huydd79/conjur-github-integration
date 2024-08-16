@@ -18,7 +18,7 @@ jobs:
       - name: Fetching secrets from conjur
         uses: cyberark/conjur-action@v2.0.2
         with:
-          url: https://apj-secrets.secretsmgr.cyberark.cloud/api
+          url: https://conjur-edge.home.huydo.net/api
           account: conjur
           authn_id: hdo-github
           secrets: data/vault/huydo/hdo_ansible02/username|TEST_USER;data/vault/huydo/hdo_ansible02/password|TEST_PASS
